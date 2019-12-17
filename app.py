@@ -16,7 +16,7 @@ import plotly.graph_objs as go
 
 
 # import data
-df = pd.read_csv('Borrower_Analysis_cleanup.csv',low_memory=False)
+df = pd.read_csv('mortgagecharts/Borrower_Analysis_cleanup.csv',low_memory=False)
 
 df_table = df[['loan_number','branch_name','loan_purpose','loan_type','loan_amount','official_loan_officer_name', 'closed_date']].copy()
 
@@ -87,7 +87,7 @@ dcc._js_dist[0]['external_url'] = 'https://cdn.plot.ly/plotly-basic-latest.min.j
 children_list = [
     html.Div(className='mat-card', style={"display": "block", "margin": "15px", "align": "center"},
              children=[
-                 html.Img(src='/static/logo.jpg', height='50', width='50'),
+                 html.Img(src='mortgagecharts/static/logo.jpg', height='50', width='50'),
                  html.H1(children='Mortgage Data Dashboard'),
                  html.P('Data provided from LendingQB MLOS System from 2014 - 2018')
              ] # end children html div 1
